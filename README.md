@@ -1,2 +1,2 @@
 # VoltOfCode
-for internship purposes 
+for the purpose of internship
