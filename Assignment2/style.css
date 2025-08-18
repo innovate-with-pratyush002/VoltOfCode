@@ -1,0 +1,355 @@
+/*Base Page Styling*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px 20px 40px 20px;
+}
+
+/* Progress Bar */
+.progress-wrap {
+    max-width: 1100px;
+    margin-top: 16px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding:0px 20px 0px 20px ;
+}
+
+.progress-label {
+    font-size: 14px;
+    margin: 0px 0px 6px 0px;
+    color: #333333;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #dddddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4a90e2;
+    transition-property: width;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+}
+
+/*  Card Sections  */
+.form-section, .preview-section {
+    flex: 1;
+    min-width: 320px;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-radius: 6px;
+   padding: 20px;
+}
+
+/*  Form Elements  */
+.form-section label {
+    display: block;
+    margin: 10px 0px 6px 0px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.form-section input,
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-radius: 4px;
+    outline: none;
+    transition-property: box-shadow, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.form-section textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0px 0px 0px 3px rgba(74, 144, 226, 0.2);
+}
+
+/*  Repeatable Item Card  */
+.repeat-item {
+    background-color: #fafafa;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 12px 0px 12px 0px;
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+
+.repeat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 12px;
+}
+
+.repeat-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px 0px 0px;
+    
+}
+
+.remove-btn {
+    background-color: #cc3333;
+    color: #ffffff;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 8px 12px 8px 12px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #aa1f1f;
+}
+
+/*  Buttons  */
+.buttons {
+    margin-top: 16px;
+}
+
+button {
+    padding: 10px 18px 10px 18px;
+    background-color: #333333;
+    color: #ffffff;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-property: background-color, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+button:hover {
+    background-color: #555555;
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    margin-top: 8px;
+    background-color: #4a90e2;
+}
+
+.secondary-btn:hover {
+    background-color: #3a78bf;
+}
+
+/* Divider */
+.section-divider {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 16px 0px 16px 0px;
+}
+
+/*  Preview Paper  */
+.resume-paper {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dddddd;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
+    animation-name: popIn;
+    animation-duration: 0.35s;
+    animation-timing-function: ease;
+}
+
+.resume-header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.resume-header h3 {
+    margin: 0px 0px 6px 0px;
+    color: #222222;
+}
+
+.contact {
+    display: flex;
+    gap: 16px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.resume-block {
+    margin: 14px 0px 14px 0px;
+   
+}
+
+.block-title {
+    margin: 0px 0px 8px 0px;
+    color: #333333;
+}
+
+.skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-chip {
+    display: inline-block;
+    padding: 6px 10px 6px 10px;
+    background-color: #eef5ff;
+    color: #2b5da7;
+    border-radius: 16px;
+    font-size: 13px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.skill-chip:hover {
+    background-color: #d9e9ff;
+}
+
+.edu-exp-item {
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: #4a90e2;
+    background-color: #fafcff;
+    transition-property: transform, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.edu-exp-item:hover {
+    transform: translateX(2px);
+    background-color: #f3f8ff;
+}
+
+.edu-exp-title {
+    font-weight: bold;
+    color: #222222;
+    margin: 0px 0px 4px 0px;
+    
+}
+
+.edu-exp-sub {
+    color: #444444;
+    margin: 0px 0px 2px 0px;
+}
+
+.edu-exp-year {
+    color: #666666;
+    font-size: 13px;
+}
+
+/* Empty note text */
+.empty-note {
+    color: #777777;
+    font-style: italic;
+}
+
+/* Small hint under preview */
+.print-hint {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 8px;
+}
+
+/*  Animations*/
+@keyframes popIn {
+    from { transform: scale(0.98); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeable {
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+    animation-timing-function: ease;
+}
+
+/* Responsive  */
+@media (max-width: 900px) {
+    .repeat-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+/*  Print Styles (PDF friendly)  */
+@media print {
+    body {
+        background-color: #ffffff;
+    }
+    h1, .form-section, .progress-wrap, .print-hint {
+        display: none;
+    }
+    .container {
+        padding: 0px;
+    }
+    .preview-section {
+        border: 0px none transparent;
+        padding: 0px;
+        box-shadow: none;
+    }
+    .resume-paper {
+        width: 210mm;
+        min-height: 297mm;
+        margin-top: 0mm;
+        margin-right: auto;
+        margin-bottom: 0mm;
+        margin-left: auto;
+        box-shadow: none;
+        border: 0px none transparent;
+        page-break-inside: avoid;
+    }
+}

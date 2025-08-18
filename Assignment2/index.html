@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Resume Builder</h1>
+
+    <!-- Progress Bar -->
+    <div class="progress-wrap">
+        <div class="progress-label" id="progressLabel">Form Completion: 0%</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!--  FORM SECTION  -->
+        <div class="form-section">
+            <h2>Fill Your Details</h2>
+
+            <form id="resumeForm" autocomplete="off">
+                <!-- Personal Info -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter your phone number">
+
+                <label for="summary">Profile Summary:</label>
+                <textarea id="summary" placeholder="Write a short summary"></textarea>
+
+                <label for="skills">Skills (separated by commas):</label>
+                <textarea id="skills" placeholder="e.g., JavaScript, HTML, CSS"></textarea>
+
+                <!-- Education Section -->
+                <div class="section-divider"></div>
+                <h3>Education</h3>
+                <div id="educationList" class="repeat-list">
+                <!-- Education items will be inserted here -->
+                </div>
+                <button type="button" id="addEducationBtn" class="secondary-btn">Add Education</button>
+
+                <!-- Experience Dynamic Section -->
+                <div class="section-divider"></div>
+                <h3>Experience</h3>
+                <div id="experienceList" class="repeat-list">
+                    <!-- Experience items will be inserted here -->
+                </div>
+                <button type="button" id="addExperienceBtn" class="secondary-btn">Add Experience</button>
+
+                <!-- Actions -->
+                <div class="buttons">
+                    <button type="button" id="clearFormBtn">Clear Form</button>
+                    <button type="button" id="resetPreviewBtn">Reset Preview</button>
+                    <button type="button" id="downloadBtn">Download as PDF</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- PREVIEW SECTION -->
+        <div class="preview-section" id="previewRoot">
+            <h2>Live Resume Preview</h2>
+
+            <div id="resumePreview" class="resume-paper">
+                <div class="resume-header">
+                    <h3 id="previewName">Your Name</h3>
+                    <div class="contact">
+                        <span id="previewEmail">your.email@example.com</span>
+                        <span id="previewPhone">+91 0000000000</span>
+                    </div>
+                </div>
+
+                <div class="resume-body">
+                    <div class="resume-block">
+                        <h4 class="block-title">Profile Summary</h4>
+                        <p id="previewSummary" class="fadeable">Your summary will appear here...</p>
+                    </div>
+
+                    <div class="resume-block">
+                        <h4 class="block-title">Skills</h4>
+                        <div id="previewSkills" class="skills-wrap">
+                            <span class="skill-chip">Your skills will appear here...</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-block">
+                        <h4 class="block-title">Education</h4>
+                        <div id="previewEducation" class="edu-exp-wrap">
+                            <div class="empty-note">Your education details will appear here...</div>
+                        </div>
+                    </div>
+
+                    <div class="resume-block">
+                        <h4 class="block-title">Experience</h4>
+                        <div id="previewExperience" class="edu-exp-wrap">
+                            <div class="empty-note">Your experience details will appear here...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="print-hint">Tip: Click “Download as PDF” to print this preview to PDF.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
