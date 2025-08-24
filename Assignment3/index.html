@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro.in - Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Editkaro.in</div>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>We bring your vision to life.</h1>
+            <p>Showcasing our best work in video editing and social media marketing.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="portfolio" class="portfolio-section">
+            <h2>Our Work</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="short-form">Short-Form</button>
+                <button class="filter-btn" data-filter="long-form">Long-Form</button>
+                <button class="filter-btn" data-filter="gaming">Gaming</button>
+                <button class="filter-btn" data-filter="football">Football Edits</button>
+                <button class="filter-btn" data-filter="ecommerce">E-Commerce Ads</button>
+                <button class="filter-btn" data-filter="documentary">Documentary</button>
+                <button class="filter-btn" data-filter="color-grading">Color Grading</button>
+                <button class="filter-btn" data-filter="anime">Anime</button>
+                <button class="filter-btn" data-filter="ads">Ads</button>
+            </div>
+            <div class="portfolio-grid">
+                </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let's Create Something Amazing</h2>
+            <p>Ready to start your project? Get in touch with us!</p>
+            <a href="mailto:contact@editkaro.in" class="contact-btn">Contact Us</a>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <video id="lightbox-video" src="" controls></video>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Editkaro.in. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
