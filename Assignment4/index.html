@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dictionary App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Dictionary</h1>
+      <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <section class="search">
+      <label for="wordInput" class="sr-only">Search a word</label>
+      <input id="wordInput" type="text" placeholder="Type a word... e.g. serendipity" autocomplete="off" />
+      <button id="searchBtn" class="btn">Search</button>
+    </section>
+
+    <section id="status" class="status" role="status" aria-live="polite"></section>
+
+    <section id="results" class="results" hidden></section>
+
+    <section class="history-wrap">
+      <div class="history-head">
+        <h2>Recent</h2>
+        <button id="clearHistory" class="btn ghost sm">Clear</button>
+      </div>
+      <div id="history" class="history"></div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Data by
+        <a href="https://dictionaryapi.dev/" target="_blank" rel="noopener">Free Dictionary API</a>
+      </p>
+    </footer>
+  </main>
+
+  <template id="defTpl">
+    <article class="card">
+      <header class="card-head">
+        <div>
+          <h2 class="word"></h2>
+          <div class="pos"></div>
+        </div>
+        <div class="phonetics"></div>
+      </header>
+      <div class="defs"></div>
+      <div class="syns" hidden>
+        <h3>Synonyms</h3>
+        <div class="chips"></div>
+      </div>
+      <div class="ants" hidden>
+        <h3>Antonyms</h3>
+        <div class="chips"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
